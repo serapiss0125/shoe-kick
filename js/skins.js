@@ -1,0 +1,78 @@
+// 靴の見た目（性能は同じ。軌跡の演出が変わる）
+// unlock = この番号のステージまで届くと手に入る
+export const SKINS = [
+  {
+    id: 'sneaker',
+    name: 'スニーカー',
+    desc: 'いつもの靴。燃えるような炎の軌跡。',
+    body: '#ffffff',
+    accent: '#ff3d5a',
+    sole: '#2b2f3a',
+    lace: '#ffd84d',
+    trail: ['#ffe27a', '#ff9a2e', '#ff4d2e'],
+    unlock: 0,
+  },
+  {
+    id: 'geta',
+    name: '下駄',
+    desc: '和の心。桜吹雪を散らして飛ぶ。',
+    body: '#d49a5e',
+    accent: '#d8323c',
+    sole: '#8a5a32',
+    lace: '#d8323c',
+    trail: ['#ffd1e3', '#ff8fb8', '#ffffff'],
+    petals: true,
+    unlock: 3,
+  },
+  {
+    id: 'rocket',
+    name: 'ロケットブーツ',
+    desc: '青いプラズマを噴き出す宇宙仕様。',
+    body: '#e8ecf2',
+    accent: '#3d8bff',
+    sole: '#30343c',
+    lace: '#4de1ff',
+    trail: ['#d8fbff', '#4de1ff', '#3d5bff'],
+    unlock: 5,
+  },
+  {
+    id: 'gold',
+    name: '黄金の靴',
+    desc: 'まばゆい金の粒をまき散らす。',
+    body: '#ffd34d',
+    accent: '#ff9f0a',
+    sole: '#8a5a00',
+    lace: '#fff3b0',
+    trail: ['#fffbe0', '#ffd34d', '#ff9f0a'],
+    unlock: 7,
+  },
+  {
+    id: 'galaxy',
+    name: 'ギャラクシーシューズ',
+    desc: '虹色の星屑の尾を引く。',
+    body: '#3b2a8a',
+    accent: '#ff5af0',
+    sole: '#14103a',
+    lace: '#7df3ff',
+    trail: ['#ff5af0', '#7df3ff', '#ffe27a', '#7dff9a'],
+    rainbow: true,
+    unlock: 10,
+  },
+  {
+    id: 'legend',
+    name: '伝説の靴',
+    desc: '宇宙の理（ことわり）すら蹴り飛ばす光の靴。',
+    body: '#ffffff',
+    accent: '#7df3ff',
+    sole: '#ffd34d',
+    lace: '#ff5af0',
+    trail: ['#ffffff', '#ffe27a', '#ff5af0', '#7df3ff'],
+    rainbow: true,
+    aura: true,
+    unlock: 14,
+  },
+];
+
+export function getSkin(id) {
+  return SKINS.find((s) => s.id === id) || SKINS[0];
+}
